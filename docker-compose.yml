@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: auditlens
+      POSTGRES_USER: auditlens
+      POSTGRES_PASSWORD: auditlens
+    ports:
+      - "5432:5432"
+    volumes:
+      - auditlens_pgdata:/var/lib/postgresql/data
+
+volumes:
+  auditlens_pgdata:
